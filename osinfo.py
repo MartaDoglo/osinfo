@@ -52,7 +52,9 @@ def get_configs():
     p.add_argument('--cpu', '-c', action='store_true', help='Shows cpu info')
     p.add_argument('--ram', '-r', action='store_true', help='Shows ram info')
     p.add_argument('--os', '-o', action='store_true', help='Shows OS info')
-    return p.parse_args()
+    options = p.parse_args()
+    logger.info(options)
+    return options
 
 
 if __name__ == '__main__':
